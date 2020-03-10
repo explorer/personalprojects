@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## Welcome to my personal project!
 
-You can use the [editor on GitHub](https://github.com/JasonWu-create/personalprojects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+If you would like to try my game, you just need to follow these three very simple steps:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. Download my code to your local environment.
+2. Find the index.html file and open it use your browser.
+3. Open the browser's developer mode and convert the browser to mobile mode.
 
-### Markdown
+If the page is a little bit weird, please do the final step (I promise!), fresh your browser.
+(I know the steps may a little bit annoying, I will fix it as soon as possible.)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+That's it, you made it. You can play my game.
 
-```markdown
-Syntax highlighted code block
+One thing I need to mention is that the database I used is not cloud database, so some functionalities may not work very well (such as ranking function). I am sorry about that and I will optimise it and other annoying bugs that may exist as soon as possible once I am free.
 
-# Header 1
-## Header 2
-### Header 3
+Anyway, thanks for playing and I hope you enjoy!
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JasonWu-create/personalprojects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Cheers!
