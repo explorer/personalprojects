@@ -3,7 +3,7 @@
 If you would like to try my game, you just need to follow these three very simple steps:
 
 1. Download my code to your local environment.
-2. Find the index.html file and open it use your browser.
+2. Go to "../games/plane/WebContent/" path and find the main.html file, open it use your browser.
 3. Open the browser's developer mode and convert the browser to mobile mode.
 
 If the page is a little bit weird, please do the final step (I promise!), fresh your browser.
