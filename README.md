@@ -9,7 +9,7 @@ If you would like to try my game, you just need to follow these three very simpl
 If the page is a little bit weird, please do the final step (I promise!), fresh your browser.
 (I know the steps may a little bit annoying, I will fix it as soon as possible.)
 
-That's it, you made it. You can play my game.
+That's it, you made it! You can play my game now!
 
 One thing I need to mention is that the database I used is not cloud database, so some functionalities may not work very well (such as ranking function). I am sorry about that and I will optimise it and other annoying bugs that may exist as soon as possible once I am free.
 
