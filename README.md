@@ -1,6 +1,6 @@
 ## Welcome to my personal project!
 
-If you would like to try my game, you just need to follow these three very simple steps:
+This is a web game developed using JavaScript, HTML and CSS by myself. If you would like to try it, you just need to follow these three very simple steps:
 
 1. Download my code to your local environment.
 2. Go to "../games/plane/WebContent/" path and find the main.html file, open it use your browser.
