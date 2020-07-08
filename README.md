@@ -13,6 +13,6 @@ That's it, you made it! You can play my game now!
 
 One thing I need to mention is that the database I used is not cloud database, so some functionalities may not work very well (such as ranking function). I am sorry about that and I will optimise it and other annoying bugs that may exist as soon as possible once I am free.
 
-Anyway, thanks for playing and I hope you enjoy!
+Anyway, thanks for playing and I hope you enjoy it!
 
 ## Cheers!
