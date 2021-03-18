@@ -1,17 +1,26 @@
+def gv //define a global variable   groovy syntax
 pipeline {
     agent any
+
+    //All environmental variables here in Jenkinsfile are available in the external groovy script
     parameters {
-        //string(name: 'VERSION', defaultValue: '', description: 'version to deploy on product')
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
-    tools {
-        maven 'Maven' //'Maven' is the name of maven, which is pre-configured and pre-installed in Jenkins "Global tool configuration" interface
-    }
+
     stages {
+        stage("init"){
+            steps{
+                script { //groovy script 
+                    gv = load "script.groovy"  //import external script
+                }
+            }
+        }
         stage("build"){
             steps{
-                sh "mvn -version" // now mvn command is available in this whole file
+                script { 
+                    gv.buildApp()  //Using the function in external script
+                }
             }
         }
 
@@ -22,14 +31,17 @@ pipeline {
                 }
             }
             steps{
-                echo 'testing the application...'
+                script {
+                    gv.testApp()
+                }
             }
         }
 
         stage("deploy"){
             steps{
-                echo "deploying version ${params.VERSION}"
-                echo 'deploying the application...'
+                script {
+                    gv.deployApp()
+                }
             }
         }
     }
