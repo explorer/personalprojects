@@ -16,8 +16,11 @@ pipeline {
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
                 }
-                ver++
-                echo "${ver}"
+                step {
+                    ver++
+                    echo "${ver}"
+                }
+                
             }
         }
         stage("build"){
