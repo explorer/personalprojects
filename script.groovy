@@ -11,4 +11,9 @@ def deployApp() {
     echo "deploying version ${params.VERSION}"  
     echo 'deploying the application...'
 }
+
+def updateVersion() {
+    params.ver++
+    echo "${params.ver}"
+}
 return this  //this is inportant otherwise you can't import this file in Jenkinsfile
