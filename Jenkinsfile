@@ -19,8 +19,8 @@ pipeline {
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
                 }
-                echo ${BUILD_NUMBER}
-                echo ${NEW_VERSION}
+                echo "${BUILD_NUMBER}"
+                echo "${NEW_VERSION}" 
             }
         }
         stage("build"){
