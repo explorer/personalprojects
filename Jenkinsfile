@@ -20,7 +20,6 @@ pipeline {
                     gv = load "script.groovy"  //import external script
                 }
                 echo ${BUILD_NUMBER}
-                ${NEW_VERSION} = ${NEW_VERSION} + 1
                 echo ${NEW_VERSION}
             }
         }
