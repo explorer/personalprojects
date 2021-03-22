@@ -1,5 +1,5 @@
 def gv //define a global variable   groovy syntax
-def ver = 1
+def ver = ${BUILD_NUMBER}
 pipeline {
     agent any
 
@@ -16,6 +16,7 @@ pipeline {
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
                     ver++
+                    echo "${BUILD_NUMBER}"
                     echo "${ver}"
                 }
                 
