@@ -1,5 +1,5 @@
 def gv //define a global variable   groovy syntax
-
+def ver = 1
 pipeline {
     agent any
 
@@ -7,9 +7,6 @@ pipeline {
     parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
-        script { 
-            def ver = 1
-        }
     }
 
 
@@ -20,7 +17,6 @@ pipeline {
                     gv = load "script.groovy"  //import external script
                 }
                 gv.updateVersion()
-                
             }
         }
         stage("build"){
