@@ -1,5 +1,7 @@
 def gv //define a global variable   groovy syntax
-def ver = ${BUILD_NUMBER}
+def item = hudson.model.Hudson.instance.getItem("GroovyMultipleFailTest") 
+def build = item.getLastBuild()
+def ver = build.getNumber()
 pipeline {
     agent any
 
@@ -15,11 +17,11 @@ pipeline {
             steps{
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
+                    def ver = ${BUILD_NUMBER}
                     ver++
                     echo "${BUILD_NUMBER}"
                     echo "${ver}"
-                }
-                
+                }               
             }
         }
         stage("build"){
