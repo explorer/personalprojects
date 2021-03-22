@@ -15,8 +15,8 @@ pipeline {
             steps{
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
+                    gv.updateVersion()
                 }
-                gv.updateVersion()
             }
         }
         stage("build"){
