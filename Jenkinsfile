@@ -1,6 +1,6 @@
 def gv //define a global variable   groovy syntax
 def item = hudson.model.Hudson.instance.getItem("my-pipeline") 
-def build = item.getLastBuild()
+def build = item.getLastBuiltOn()
 def ver = build.getNumber()
 pipeline {
     agent any
