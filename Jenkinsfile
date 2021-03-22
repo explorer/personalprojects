@@ -17,7 +17,6 @@ pipeline {
             steps{
                 script { //groovy script 
                     gv = load "script.groovy"  //import external script
-                    def ver = ${BUILD_NUMBER}
                     ver++
                     echo "${BUILD_NUMBER}"
                     echo "${ver}"
