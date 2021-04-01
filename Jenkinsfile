@@ -11,8 +11,8 @@ pipeline {
         stage('versioning') {
             steps {
                 //cleanWs() // Clean workspace before build
+                git checkout dev
                 script{
-                    git checkout dev
                     
                     if (fileExists(filePath)) {
                         echo 'File exists'
