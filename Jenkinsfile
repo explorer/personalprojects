@@ -58,6 +58,8 @@ pipeline {
                     sh '''
                         git add version.txt
                         git commit -m "Updated version number"
+                        git config --global user.email "mrwuyw@hotmail.com"
+                        git config --global user.name "explorer"
                         git push
                         '''
                 }
