@@ -56,8 +56,8 @@ pipeline {
             
                 script {
                     sh '''
-                        git config --global user.email "yaowen.wu@ericsson.com"
-                        git config --global user.name "yaowen"
+                        git config --global user.email "mrwuyw@hotmail.com"
+                        git config --global user.name "explorer"
                         git add version.txt
                         git commit -m "Updated version number"
                         '''
