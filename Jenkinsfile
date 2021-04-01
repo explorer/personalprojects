@@ -60,7 +60,7 @@ pipeline {
                         git config --global user.name "explorer"
                         git add version.txt
                         git commit -m "Updated version number"
-                        git push
+                        git push origin HEAD:refs/heads/dev
                         '''
                 }
             
