@@ -11,8 +11,8 @@ pipeline {
         stage('versioning') {
             steps {
                 //cleanWs() // Clean workspace before build
+                sh "git checkout dev"
                 script{
-                    
                     if (fileExists(filePath)) {
                         echo 'File exists'
                         fileContents = readFile encoding: 'UTF-8', file: filePath
@@ -55,9 +55,11 @@ pipeline {
         success {
             
                 script {
-                    git add version.txt
-                    git commit -m "Updated version number"
-                    git push
+                    sh '''
+                        git add version.txt
+                        git commit -m "Updated version number"
+                        git push
+                        '''
                 }
             
         }    
