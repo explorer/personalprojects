@@ -5,7 +5,6 @@ pipeline {
     
     environment {
         tag = VersionNumber(versionNumberString: '1.0.0.${BUILDS_ALL_TIME}');
-        //BUILDS_ALL_TIME = 1
     }
     
     stages {
@@ -13,6 +12,8 @@ pipeline {
             steps {
                 //cleanWs() // Clean workspace before build
                 script{
+                    git checkout dev
+                    
                     if (fileExists(filePath)) {
                         echo 'File exists'
                         fileContents = readFile encoding: 'UTF-8', file: filePath
@@ -48,7 +49,19 @@ pipeline {
                     //currentBuild.displayName = versionNumber
                 //}
             }
-        }
+        }    
+    }
+    
+    post{
+        success {
+            steps{
+                script {
+                    git add version.txt
+                    git commit -m "Updated version number"
+                    git push
+                }
+            }
+        }    
     }
     
 }
