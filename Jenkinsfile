@@ -56,10 +56,10 @@ pipeline {
             
                 script {
                     sh '''
-                        git add version.txt
-                        git commit -m "Updated version number"
                         git config --global user.email "yaowen.wu@ericsson.com"
                         git config --global user.name "yaowen"
+                        git add version.txt
+                        git commit -m "Updated version number"
                         '''
                 }
             
