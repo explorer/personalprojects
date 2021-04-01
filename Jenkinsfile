@@ -53,13 +53,13 @@ pipeline {
     
     post{
         success {
-            steps{
+            
                 script {
                     git add version.txt
                     git commit -m "Updated version number"
                     git push
                 }
-            }
+            
         }    
     }
     
